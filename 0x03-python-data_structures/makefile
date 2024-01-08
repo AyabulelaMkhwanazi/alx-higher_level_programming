@@ -1,6 +1,6 @@
 PY = python3
-SCRIPT = 6-main.py
-MSG = "6. Lists of lists = Matrix"
+SCRIPT = 7-main.py
+MSG = "7. Tuples addition"
 
 all: chmod test
 
