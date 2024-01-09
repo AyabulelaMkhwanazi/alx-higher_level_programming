@@ -1,7 +1,7 @@
 PY = python3
-SCRIPT = 8-main.py
-MSG = "8. More returns!"
-FILE = 8-multiple_returns.py
+SCRIPT = 11-main.py
+MSG = "Tasks Complete"
+FILE = 11-delete_at.py
 
 .PHONY: all test chmod git clean
 
