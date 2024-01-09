@@ -1,4 +1,4 @@
-TARGET_MAKEFILE := makefile
+TARGET_MAKEFILE := pymakefile
 OLD_MAIN_FILE := $(shell grep -oP 'SCRIPT = \K.*' $(TARGET_MAKEFILE))
 MAIN_FILE := $(shell ls -t *-main.py | head -n 1)
 TEST_FILE := $(shell ls -t *.py | head -n 1)
