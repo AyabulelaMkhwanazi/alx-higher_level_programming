@@ -1,7 +1,8 @@
 PY = python3
-SCRIPT = 11-main.py
+SCRIPT = 
+EXECUTABLE = 12-switch.py
 MSG = "Tasks Complete"
-FILE = 11-delete_at.py
+FILE = 12-switch.py
 
 .PHONY: all test chmod git clean
 
@@ -9,15 +10,21 @@ all: chmod test count
 
 test:
 	@echo
-	$(PY) $(SCRIPT)
+	@if [ "$(SCRIPT)" = "" ]; then \
+		$(PY) $(FILE); \
+	else \
+		$(PY) $(SCRIPT); \
+	fi
 
 chmod:
 	@echo
-	chmod u+x $(SCRIPT)
+	chmod u+x $(EXECUTABLE)
 
 git:
-	git add .
-	git commit -m $(MSG)
+	@echo "Enter a new commit message: "; \
+	read NEW_MSG; \
+	git add .;\
+	git commit -m "$$NEW_MSG"; \
 	git push
 
 clean:
@@ -27,3 +34,4 @@ count:
 	@echo
 	wc -l $(FILE)
 	@echo
+
