@@ -1,7 +1,7 @@
 PY = python3
-SCRIPT = 10-main.py
-EXECUTABLE = 10-main.py
-FILE = 10-divisible_by_2.py
+SCRIPT = 
+EXECUTABLE = 
+FILE = 5-no_c.py
 
 .PHONY: all test chmod git clean
 
