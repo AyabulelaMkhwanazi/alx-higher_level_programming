@@ -45,7 +45,7 @@ style:
 	@echo "Checking $(FILE) for style errors..."
 	@sleep 2
 	@bash -c '\
-	OUTPUT=$$(pycodestyle $(FILE)); \
+	OUTPUT=$$(pycodestyle --show-source $(FILE)); \
 	if [ -n "$$OUTPUT" ]; then \
 		echo $$OUTPUT; \
 	else \
