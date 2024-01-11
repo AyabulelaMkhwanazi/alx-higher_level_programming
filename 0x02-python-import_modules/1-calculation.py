@@ -10,10 +10,10 @@ def main():
     result3 = mul(a, b)
     result4 = div(a, b)
 
-    print("%d + %d = %d" % (a, b, result1))
-    print("%d - %d = %d" % (a, b, result2))
-    print("%d * %d = %d" % (a, b, result3))
-    print("%d / %d = %d" % (a, b, result4))
+    print("{} + {} = {}".format(a, b, result1))
+    print("{} - {} = {}".format(a, b, result2))
+    print("{} * {} = {}".format(a, b, result3))
+    print("{} / {} = {}".format(a, b, result4))
 
 
 if __name__ == "__main__":
