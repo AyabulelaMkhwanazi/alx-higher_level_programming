@@ -1,7 +1,7 @@
 PY = python3
 SCRIPT =
-EXECUTABLE = 0-add.py
-FILE = 0-add.py
+EXECUTABLE = 2-args.py
+FILE = 2-args.py
 
 .PHONY: all test chmod git clean
 
