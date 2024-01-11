@@ -9,7 +9,7 @@ def main():
 
     num_args = len(args.args)
     if num_args == 0:
-        print(f"{num_args} arguments .")
+        print(f"{num_args} arguments.")
     elif num_args == 1:
         print(f"{num_args} argument:")
     else:
