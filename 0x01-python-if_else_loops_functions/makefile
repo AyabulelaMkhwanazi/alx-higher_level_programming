@@ -1,7 +1,7 @@
 PY = python3
-SCRIPT =
-EXECUTABLE =
-FILE = 
+SCRIPT = 9-main.py
+EXECUTABLE = 9-main.py
+FILE = 9-main.py
 
 .PHONY: all test chmod git clean
 
@@ -18,6 +18,7 @@ test:
 	sleep 1; \
 		$(PY) $(SCRIPT); \
 	fi
+	@echo
 
 chmod:
 	@echo
