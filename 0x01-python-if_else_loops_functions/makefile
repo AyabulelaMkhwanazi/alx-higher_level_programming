@@ -1,7 +1,7 @@
 PY = python3
-SCRIPT = 9-main.py
-EXECUTABLE = 9-main.py
-FILE = 9-print_last_digit.py
+SCRIPT = 10-main.py
+EXECUTABLE = 10-main.py
+FILE = 10-add.py
 
 .PHONY: all test chmod git clean
 
