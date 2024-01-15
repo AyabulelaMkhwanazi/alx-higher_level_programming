@@ -1,7 +1,7 @@
 PY = python3
-SCRIPT = 9-main.py
-EXECUTABLE = 9-main.py
-FILE = 9-main.py
+SCRIPT = 8-main.py
+EXECUTABLE = 8-main.py
+FILE = 8-main.py
 
 .PHONY: all test chmod git clean
 
