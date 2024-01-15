@@ -1,7 +1,7 @@
 PY = python3
 SCRIPT = 9-main.py
 EXECUTABLE = 9-main.py
-FILE = 9-main.py
+FILE = 9-print_last_digit.py
 
 .PHONY: all test chmod git clean
 
@@ -46,7 +46,7 @@ style:
 	@echo "Checking $(FILE) for style errors..."
 	@sleep 2
 	@bash -c '\
-	OUTPUT=$$(pycodestyle $(FILE)); \
+	OUTPUT=$$(pycodestyle --show-source $(FILE)); \
 	if [ -n "$$OUTPUT" ]; then \
 		echo $$OUTPUT; \
 	else \
