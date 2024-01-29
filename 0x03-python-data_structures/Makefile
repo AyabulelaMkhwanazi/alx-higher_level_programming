@@ -31,9 +31,9 @@ chmod:
 	@echo "$(EXECUTABLE) made an executable"
 
 git:
-	git add .;\
-	git commit -m "$$(cat .commit_msg)"; \
-	rm .commit_msg; \
+	@git add .
+	@git commit -m "$$(cat .commit_msg)"
+	@rm .commit_msg
 	git push
 
 clean:
