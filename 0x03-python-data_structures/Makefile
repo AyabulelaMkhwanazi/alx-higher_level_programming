@@ -1,7 +1,10 @@
+#!/usr/bin/make -s -f
+include update_pymakefile.mk
+
 PY = python3
-SCRIPT = 
-EXECUTABLE = 
-FILE = 5-no_c.py
+SCRIPT =
+EXECUTABLE =
+FILE =
 
 .PHONY: all test chmod git clean
 
@@ -11,13 +14,16 @@ test:
 	@echo
 	@if [ "$(SCRIPT)" = "" ]; then \
 		echo "Running $(FILE)..."; \
-	sleep 1; \
+		sleep 1; \
 		$(PY) $(FILE); \
+		EXECUTABLE=$(FILE); \
 	else \
 		echo "Running $(SCRIPT)..."; \
-	sleep 1; \
+		sleep 1; \
 		$(PY) $(SCRIPT); \
+		EXECUTABLE=$(SCRIPT); \
 	fi
+	@echo "$(EXECUTABLE) is the executable file"
 
 chmod:
 	@echo
@@ -25,10 +31,9 @@ chmod:
 	@echo "$(EXECUTABLE) made an executable"
 
 git:
-	@echo "Enter a commit message: "; \
-	read NEW_MSG; \
 	git add .;\
-	git commit -m "$$NEW_MSG"; \
+	git commit -m "$$(cat .commit_msg)"; \
+	rm .commit_msg; \
 	git push
 
 clean:
