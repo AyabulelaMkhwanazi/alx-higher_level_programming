@@ -33,8 +33,13 @@ chmod:
 
 git:
 	@git add .
-	@git commit -m "$$(cat .commit_msg)"
-	@rm .commit_msg
+	@if [ -f .commit_msg ]; then \
+		git commit -m "$$(cat .commit_msg)"; \
+		rm .commit_msg; \
+	else \
+		read -p "Enter commit message: " msg; \
+		git commit -m "$$msg"; \
+	fi
 	git push
 
 clean:
