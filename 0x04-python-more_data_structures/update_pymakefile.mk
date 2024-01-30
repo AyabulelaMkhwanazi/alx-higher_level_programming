@@ -1,4 +1,5 @@
 #!/usr/bin/make -s -f
+
 TARGET_MAKEFILE := Makefile
 OLD_MAIN_FILE := $(shell grep -oP 'SCRIPT = \K.*' $(TARGET_MAKEFILE))
 
@@ -13,7 +14,7 @@ README_SH := update_pyreadme.sh
 
 .PHONY: update_makefile
 
-# Updtes the target makefile.
+# Updates the target makefile.
 update_makefile:
 	@echo "Updating $(TARGET_MAKEFILE)..."
 	@if [ "$(MAIN_FILE)" = "$(OLD_MAIN_FILE)" ]; then \
@@ -21,6 +22,7 @@ update_makefile:
 		sed -i 's|SCRIPT = .*|SCRIPT = |' $(TARGET_MAKEFILE); \
 	else \
 		sed -i 's|SCRIPT = .*|SCRIPT = $(MAIN_FILE)|' $(TARGET_MAKEFILE); \
+		sed -i 's|EXECUTABLE = .*|EXECUTABLE = $(MAIN_FILE)|' $(TARGET_MAKEFILE); \
 	fi
 	@if [ -z "$(SCRIPT)" ]; then \
 		if [ -z "$(FILE)" ]; then \
@@ -36,6 +38,7 @@ update_makefile:
 	else \
 		sed -i 's|FILE = .*|FILE = $(TEST_FILES)|' $(TARGET_MAKEFILE); \
 	fi
+
 
 # Updates the README file.
 update_pyreadme:
