@@ -6,7 +6,6 @@
 
 > [!IMPORTANT]
 > Make the Python files executables using the following command:
-
 `chmod +x <filename>`
 
 > [!NOTE]
@@ -24,3 +23,7 @@
 - **2. Unique addition.**
 
    - :file_folder: : `2-uniq_add.py`: Function adds all unique integers in a list (only once for each integer).
+
+- **3. Present in both.**
+
+   - :file_folder: : `3-common_elements.py`: Function returns a set of common elements in two sets.

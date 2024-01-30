@@ -2,9 +2,9 @@
 include update_pymakefile.mk
 
 PY = python3
-SCRIPT = 2-main.py
-EXECUTABLE = 2-uniq_add.py 
-FILE = 2-uniq_add.py 
+SCRIPT = 3-main.py
+EXECUTABLE = 3-main.py
+FILE = 3-common_elements.py
 
 .PHONY: all test chmod git clean
 
