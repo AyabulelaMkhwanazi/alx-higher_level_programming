@@ -43,3 +43,7 @@
 - **7. Update dictionary.**
 
    - :file_folder: : `7-update_dictionary.py`: Function replaces or adds key/value in a dictionary.
+
+- **8. Simple delete by key.**
+
+   - :file_folder: : `8-simple_delete.py`: Function deletes a key in a dictionary.
