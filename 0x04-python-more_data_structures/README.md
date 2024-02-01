@@ -51,3 +51,7 @@
 - **9. Multiply by 2.**
 
    - :file_folder: : `9-multiply_by_2.py`: Function returns a new dictionary with all values multiplied by 2.
+
+- **10. Best score.**
+
+   - :file_folder: : `10-best_score.py`: Function returns a key with the highest integer value.
