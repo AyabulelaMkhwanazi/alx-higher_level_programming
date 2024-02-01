@@ -39,3 +39,7 @@
 - **6. Print sorted dictionary.**
 
    - :file_folder: : `6-print_sorted_dictionary.py`: Function prints a dictionary by ordered keys
+
+- **7. Update dictionary.**
+
+   - :file_folder: : `7-update_dictionary.py`: Function replaces or adds key/value in a dictionary.

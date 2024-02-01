@@ -2,9 +2,9 @@
 include update_pymakefile.mk
 
 PY = python3
-SCRIPT = 6-main.py
-EXECUTABLE = 6-main.py
-FILE = 6-print_sorted_dictionary.py
+SCRIPT = 7-main.py
+EXECUTABLE = 7-main.py
+FILE = 7-update_dictionary.py 
 
 .PHONY: all test chmod git clean
 
