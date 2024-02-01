@@ -14,31 +14,25 @@ README_SH := update_pyreadme.sh
 
 .PHONY: update_makefile
 
-# Updates the target makefile.
 update_makefile:
 	@echo "Updating $(TARGET_MAKEFILE)..."
-	@if [ "$(MAIN_FILE)" = "$(OLD_MAIN_FILE)" ]; then \
-		echo "No new main file found..."; \
-		sed -i 's|SCRIPT = .*|SCRIPT = |' $(TARGET_MAKEFILE); \
-	else \
-		sed -i 's|SCRIPT = .*|SCRIPT = $(MAIN_FILE)|' $(TARGET_MAKEFILE); \
-		sed -i 's|EXECUTABLE = .*|EXECUTABLE = $(MAIN_FILE)|' $(TARGET_MAKEFILE); \
+	@if [ "$(MAIN_FILE)" != "$(OLD_MAIN_FILE)" ]; then \
+		echo "New main file found..."; \
+		sed -i "s|SCRIPT = .*|SCRIPT = $(MAIN_FILE)|" $(TARGET_MAKEFILE); \
+		sed -i "s|FILE = .*|FILE = $(TEST_FILES)|" $(TARGET_MAKEFILE); \
 	fi
-	@if [ -z "$(SCRIPT)" ]; then \
-		if [ -z "$(FILE)" ]; then \
+	@SCRIPT_IN_MAKEFILE=$(shell grep -oP 'SCRIPT = \K.*' $(TARGET_MAKEFILE)); \
+	FILE_IN_MAKEFILE=$(shell grep -oP 'FILE = \K.*' $(TARGET_MAKEFILE)); \
+	if [ -z "$$SCRIPT_IN_MAKEFILE" ]; then \
+		if [ -z "$$FILE_IN_MAKEFILE" ]; then \
 			echo "Both SCRIPT and FILE variables are empty. Cannot update EXECUTABLE variable."; \
+			sed -i "s|EXECUTABLE = .*|EXECUTABLE = |" $(TARGET_MAKEFILE); \
 		else \
-			sed -i 's|EXECUTABLE = .*|EXECUTABLE = $(FILE)|' $(TARGET_MAKEFILE); \
+			sed -i "s|EXECUTABLE = .*|EXECUTABLE = $$FILE_IN_MAKEFILE|" $(TARGET_MAKEFILE); \
 		fi; \
 	else \
-		sed -i 's|EXECUTABLE = .*|EXECUTABLE = $(SCRIPT)|' $(TARGET_MAKEFILE); \
+		sed -i "s|EXECUTABLE = .*|EXECUTABLE = $$SCRIPT_IN_MAKEFILE|" $(TARGET_MAKEFILE); \
 	fi
-	@if [ -z "$(TEST_FILES)" ]; then \
-		echo "Didn't find new test files"; \
-	else \
-		sed -i 's|FILE = .*|FILE = $(TEST_FILES)|' $(TARGET_MAKEFILE); \
-	fi
-
 
 # Updates the README file.
 update_pyreadme:
