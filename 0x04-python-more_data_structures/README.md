@@ -35,3 +35,7 @@
 - **5. Number of keys.**
 
    - :file_folder: : `5-number_keys.py`: Functioin returns the number of keys in a dictionary
+
+- **6. Print sorted dictionary.**
+
+   - :file_folder: : `6-print_sorted_dictionary.py`: Function prints a dictionary by ordered keys
