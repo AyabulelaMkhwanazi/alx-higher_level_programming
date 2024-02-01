@@ -47,3 +47,7 @@
 - **8. Simple delete by key.**
 
    - :file_folder: : `8-simple_delete.py`: Function deletes a key in a dictionary.
+
+- **9. Multiply by 2.**
+
+   - :file_folder: : `9-multiply_by_2.py`: Function returns a new dictionary with all values multiplied by 2.
