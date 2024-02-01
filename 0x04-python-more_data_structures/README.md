@@ -55,3 +55,7 @@
 - **10. Best score.**
 
    - :file_folder: : `10-best_score.py`: Function returns a key with the highest integer value.
+
+- **11. Multiply by using map.**
+
+   - :file_folder: : `11-multiply_list_map.py`: Functioin returns a list with all values multiplied by  a number without using any loops.

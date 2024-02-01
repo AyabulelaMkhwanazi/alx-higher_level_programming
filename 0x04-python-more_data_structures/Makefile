@@ -2,9 +2,9 @@
 include update_pymakefile.mk
 
 PY = python3
-SCRIPT = 10-main.py
-EXECUTABLE = 10-main.py
-FILE = 10-best_score.py 
+SCRIPT = 11-main.py
+EXECUTABLE = 11-main.py
+FILE = 11-multiply_list_map.py 
 
 .PHONY: all test chmod git clean
 
