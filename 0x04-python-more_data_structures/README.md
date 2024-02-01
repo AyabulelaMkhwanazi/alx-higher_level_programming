@@ -31,3 +31,7 @@
 - **4. Only differents.**
 
    - :file_folder: : `4-only_diff_elements.py`: Function returns a set of all elements present in only one set.
+
+- **5. Number of keys.**
+
+   - :file_folder: : `5-number_keys.py`: Functioin returns the number of keys in a dictionary
