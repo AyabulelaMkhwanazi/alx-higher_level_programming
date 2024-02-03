@@ -67,3 +67,7 @@
 - **13. Weighted average!.**
 
    - :file_folder: : `100-weight_average.py`: Function returns the weight averae of all integers tuple (<score>, <weight>).
+
+- **14. Squared by using map.**
+
+   - :file_folder: : `101-square_matrix_map.py`: Function computes the square value of all integers of a matrix using `map`.
