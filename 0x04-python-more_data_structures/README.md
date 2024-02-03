@@ -71,3 +71,7 @@
 - **14. Squared by using map.**
 
    - :file_folder: : `101-square_matrix_map.py`: Function computes the square value of all integers of a matrix using `map`.
+
+- **15. Delete by value.**
+
+   - :file_folder: : `102-complex_delete.py`: Function deletes keys with a specific value in a dictionary.

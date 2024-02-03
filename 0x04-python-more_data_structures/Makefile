@@ -2,9 +2,9 @@
 include update_pymakefile.mk
 
 PY = python3
-SCRIPT = 101-main.py
-EXECUTABLE = 101-main.py
-FILE = 101-square_matrix_map.py 
+SCRIPT = 102-main.py
+EXECUTABLE = 102-main.py
+FILE = 102-complex_delete.py 
 
 .PHONY: all test chmod git clean
 
