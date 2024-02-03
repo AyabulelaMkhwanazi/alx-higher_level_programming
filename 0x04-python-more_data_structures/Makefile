@@ -2,9 +2,9 @@
 include update_pymakefile.mk
 
 PY = python3
-SCRIPT = 12-main.py
-EXECUTABLE = 12-main.py
-FILE = 12-roman_to_int.py 
+SCRIPT = 100-main.py
+EXECUTABLE = 100-main.py
+FILE = 100-weight_average.py 
 
 .PHONY: all test chmod git clean
 

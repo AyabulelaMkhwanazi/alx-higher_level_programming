@@ -63,3 +63,7 @@
 - **12. Roman to Integer.**
 
    - :file_folder: : `12-roman_to_integer.py`: **Technical interview preparation: Create a function `def roman_to_int(roman_string):` that converts a Roman numeral to an integer.**
+
+- **13. Weighted average!.**
+
+   - :file_folder: : `100-weight_average.py`: Function returns the weight averae of all integers tuple (<score>, <weight>).
