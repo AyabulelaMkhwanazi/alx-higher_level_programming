@@ -58,4 +58,8 @@
 
 - **11. Multiply by using map.**
 
-   - :file_folder: : `11-multiply_list_map.py`: Functioin returns a list with all values multiplied by  a number without using any loops.
+   - :file_folder: : `11-multiply_list_map.py`: Function returns a list with all values multiplied by a number without using any loops.
+
+- **12. Roman to Integer.**
+
+   - :file_folder: : `12-roman_to_integer.py`: **Technical interview preparation: Create a function `def roman_to_int(roman_string):` that converts a Roman numeral to an integer.**

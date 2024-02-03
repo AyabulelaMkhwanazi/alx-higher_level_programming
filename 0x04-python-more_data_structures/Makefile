@@ -2,9 +2,9 @@
 include update_pymakefile.mk
 
 PY = python3
-SCRIPT = 11-main.py
-EXECUTABLE = 11-main.py
-FILE = 11-multiply_list_map.py 
+SCRIPT = 12-main.py
+EXECUTABLE = 12-main.py
+FILE = 12-roman_to_int.py 
 
 .PHONY: all test chmod git clean
 
