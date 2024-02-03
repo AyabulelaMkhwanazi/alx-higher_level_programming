@@ -75,3 +75,7 @@
 - **15. Delete by value.**
 
    - :file_folder: : `102-complex_delete.py`: Function deletes keys with a specific value in a dictionary.
+
+- **16. CPython#1: PyBytesObject.**
+
+   - :file_folder: : `103-python.c`: Create two C functions that print some basic info about Python lists and Python bytes objects.
