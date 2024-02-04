@@ -32,3 +32,7 @@
 - **4. Divide a list.**
 
    - :file_folder: : `4-list_division.py`: Function divides element by element 2 lists.
+
+- **5. Raise exception.**
+
+   - :file_folder: : `5-raise_exception.py`: Function raises a type exception.
