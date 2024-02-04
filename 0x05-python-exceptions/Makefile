@@ -2,9 +2,9 @@
 include update_pymakefile.mk
 
 PY = python3
-SCRIPT = 2-main.py
-EXECUTABLE = 2-main.py
-FILE = 2-safe_print_list_integers.py 
+SCRIPT = 3-main.py
+EXECUTABLE = 3-main.py
+FILE = 3-safe_print_division.py 
 
 .PHONY: all test chmod git clean
 

@@ -24,3 +24,7 @@
 - **2. Print and count integers.**
 
    - :file_folder: : `2-safe_print_list_integers.py`: Function prints the first `x` elements of a list and only integers
+
+- **3. Integers division with debug.**
+
+   - :file_folder: : `3-safe_print_division.py`: Function divides 2 integers and prints the result.
