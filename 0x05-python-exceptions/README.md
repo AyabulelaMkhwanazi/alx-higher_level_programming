@@ -36,3 +36,7 @@
 - **5. Raise exception.**
 
    - :file_folder: : `5-raise_exception.py`: Function raises a type exception.
+
+- **6. Raise a message.**
+
+   - :file_folder: : `6-raise_exception_msg.py`: Function raises a name exception with a message.
