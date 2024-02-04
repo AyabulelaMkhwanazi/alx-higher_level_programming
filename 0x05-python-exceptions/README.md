@@ -40,3 +40,7 @@
 - **6. Raise a message.**
 
    - :file_folder: : `6-raise_exception_msg.py`: Function raises a name exception with a message.
+
+- **7. Safe integer print with error message.**
+
+   - :file_folder: : `100-safe_print_integer_err.py`: Function prints an integer.
