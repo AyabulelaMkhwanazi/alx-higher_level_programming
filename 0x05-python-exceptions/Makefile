@@ -2,9 +2,9 @@
 include update_pymakefile.mk
 
 PY = python3
-SCRIPT = 101-main.py
-EXECUTABLE = 101-main.py
-FILE = 101-safe_function.py 
+SCRIPT = 
+EXECUTABLE = 102-magic_calculation.py
+FILE = 102-magic_calculation.py 
 
 .PHONY: all test chmod git clean
 

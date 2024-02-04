@@ -48,3 +48,7 @@
 - **8. Safe function.**
 
    - :file_folder: : `101-safe_function.py`: Function executes a function safely.
+
+- **9. ByteCode-> Python #4.**
+
+   - :file_folder: : `102-magic_calculation.py`: Function mimics Python byte code.
