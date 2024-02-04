@@ -20,3 +20,7 @@
 - **1. Safe printing of an integers list.**
 
    - :file_folder: : `1-safe_print_integer.py`: Function prints an integer with `{:d}.format().`
+
+- **2. Print and count integers.**
+
+   - :file_folder: : `2-safe_print_list_integers.py`: Function prints the first `x` elements of a list and only integers
