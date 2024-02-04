@@ -28,3 +28,7 @@
 - **3. Integers division with debug.**
 
    - :file_folder: : `3-safe_print_division.py`: Function divides 2 integers and prints the result.
+
+- **4. Divide a list.**
+
+   - :file_folder: : `4-list_division.py`: Function divides element by element 2 lists.
