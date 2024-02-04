@@ -44,3 +44,7 @@
 - **7. Safe integer print with error message.**
 
    - :file_folder: : `100-safe_print_integer_err.py`: Function prints an integer.
+
+- **8. Safe function.**
+
+   - :file_folder: : `101-safe_function.py`: Function executes a function safely.
