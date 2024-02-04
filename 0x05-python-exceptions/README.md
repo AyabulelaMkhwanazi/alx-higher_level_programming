@@ -16,3 +16,7 @@
 - **0. Safe list printing.**
 
    - :file_folder: : `0-safe_print_list.py`: Function prints `x` elements of a list.
+
+- **1. Safe printing of an integers list.**
+
+   - :file_folder: : `1-safe_print_integer.py`: Function prints an integer with `{:d}.format().`
