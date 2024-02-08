@@ -52,3 +52,9 @@
 - **9. ByteCode-> Python #4.**
 
    - :file_folder: : `102-magic_calculation.py`: Function mimics Python byte code.
+
+- **10. Cpython #2: PyFloatObject.**
+
+   - :file_folder: : `103-tests.py`: Create three C functions that print some basic info about Python lists,  Python bytes, and Python float objects.
+
+   - compilation: `gcc -Wall -Werror -Wextra -pedantic -std=c99 -shared -Wl,-soname,libPython.so -o libPython.so -fPIC -I/usr/include/python3.4 103-python.c`
