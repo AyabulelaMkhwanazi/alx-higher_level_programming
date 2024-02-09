@@ -58,7 +58,7 @@ update_pyreadme:
 		i=$$((i+1)); \
 	done; \
 	printf "\b "; \
-	@if [ -n "$(README_SH)" ]; then \
+	if [ -n "$(README_SH)" ]; then \
 		chmod u+x $(README_SH); \
 		echo "Running $(README_SH)..."; \
 		./$(README_SH); \
