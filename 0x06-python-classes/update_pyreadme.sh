@@ -46,7 +46,7 @@ while true; do
     echo "- [x] $task_num. **$task_title**" >> README.md
     echo "" >> README.md
     echo "   - :file_folder: : \`$file_name\`: $desc" >> README.md
-	echo "$task_title" >> .commit_msg
+	echo "${task_title/<sup>:fire: advanced<\/sup>/}" >> .commit_msg
     while true; do
 		echo ""
         echo "Do you still want to update the README file again? (yes/no)"
