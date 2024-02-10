@@ -103,3 +103,7 @@ And, write a class `SinglyLinkedList` that defines a singly linked list by:
   - one node number by line
 
 - Public instance method: _`def sorted_insert(self, value):`_ that inserts a new `Node` into the correct sorted position in the list (increasing order)
+
+- [x] 8. **Print Square instance   <sup>:fire: advanced</sup>**
+
+- :file_folder: : `101-square.py`: Write a class `Square` that defines a square by: (based on `6-square.py`)

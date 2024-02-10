@@ -30,6 +30,7 @@ while true; do
     fi
     task_num=${task_header%%.*}
     task_title=${task_header#*.}
+    echo ""
     echo "Is this an advanced task? (yes/no)"
     read is_advanced
     if [ "$is_advanced" = "yes" ]; then
@@ -42,7 +43,7 @@ while true; do
     echo "Enter a short description for the functions in $file_name:"
     read desc
     echo "" >> README.md
-    echo "-[x] $task_num. **$task_title.**" >> README.md
+    echo "- [x] $task_num. **$task_title**" >> README.md
     echo "" >> README.md
     echo "   - :file_folder: : \`$file_name\`: $desc" >> README.md
 	echo "$task_title" >> .commit_msg
