@@ -45,7 +45,7 @@
     - property `def size(self):` to retrieve it
     - property setter `def size(self, value):` to set it:
             - `size` must be an integer, otherwise raise a `TypeError` exception with the message `size must be an integer`
-            - if `size` is less than `0`, raise a `ValueError` exceptioni with the message `size must be >= 0`
+            - if `size` is less than `0`, raise a `ValueError` exception with the message `size must be >= 0`
   - Instantation with optional `size`: `def __init__(self, size=0):`
   - Public instance method: `def area(self):` that returns the current square area.
 
@@ -103,7 +103,10 @@ And, write a class `SinglyLinkedList` that defines a singly linked list by:
   - one node number by line
 
 - Public instance method: _`def sorted_insert(self, value):`_ that inserts a new `Node` into the correct sorted position in the list (increasing order)
+<<<<<<< HEAD
 
 - [x] 8. **Print Square instance   <sup>:fire: advanced</sup>**
 
 - :file_folder: : `101-square.py`: Write a class `Square` that defines a square by: (based on `6-square.py`)
+=======
+>>>>>>> 99c5175b1c49e7a2c914a47b0adf466af44049c2
