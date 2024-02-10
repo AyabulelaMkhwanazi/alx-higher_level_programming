@@ -16,8 +16,8 @@ class Node:
         next node (Node, optional): The next node in the list.
         Defaults to None.
         """
-        self.__data = data
-        self.__next_node = next_node
+        self.data = data
+        self.next_node = next_node
 
     @property
     def data(self):
@@ -41,7 +41,7 @@ class Node:
             TypeError: If the data is not an integer..
         """
         if not isinstance(value, int):
-            raise TypeError("data must be an integerr")
+            raise TypeError("data must be an integer")
         self.__data = value
 
     @property
