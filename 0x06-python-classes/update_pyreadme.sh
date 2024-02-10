@@ -24,21 +24,28 @@ fi
 while true; do
     echo ""
     echo "What's the task title (or 'q' to quit):"
-    read task_num
+    read task_header
     if [ "$task_num" = "q" ]; then
         break
     fi
+    task_num=${task_header%%.*}
+    task_title=${task_header#*.}
+    echo "Is this an advanced task? (yes/no)"
+    read is_advanced
+    if [ "$is_advanced" = "yes" ]; then
+        task_title="$task_title   <sup>:fire: advanced</sup>"
+    fi
 	echo ""
-    echo "What's the file name for task $task_num:"
+    echo "What's the file name for task $task_title:"
     read file_name
 	echo ""
     echo "Enter a short description for the functions in $file_name:"
     read desc
     echo "" >> README.md
-    echo "- **$task_num.**" >> README.md
+    echo "-[x] $task_num. **$task_title.**" >> README.md
     echo "" >> README.md
     echo "   - :file_folder: : \`$file_name\`: $desc" >> README.md
-	echo "$task_num" >> .commit_msg
+	echo "$task_title" >> .commit_msg
     while true; do
 		echo ""
         echo "Do you still want to update the README file again? (yes/no)"
