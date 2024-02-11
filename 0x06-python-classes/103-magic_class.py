@@ -2,10 +2,11 @@
 """This module defines a class MagicClass."""
 import math
 
+
 class MagicClass:
     """
     This class defines a MagicClass by its
-    radius with methods to calculate 
+    radius with methods to calculate
     its area and its circumference.
     """
 
