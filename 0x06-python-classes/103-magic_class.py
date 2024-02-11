@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+
 import math
+
 """
 This module defines a MagicClass class.
 """
@@ -8,7 +10,7 @@ This module defines a MagicClass class.
 class MagicClass:
     """
     This class defines a MagicClass
-    by its radius.
+    by its area and its circumference.
     """
 
     def __init__(self, radius=0):
