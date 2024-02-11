@@ -2,9 +2,9 @@
 include update_pymakefile.mk
 
 PY = python3
-SCRIPT = 102-main.py
-EXECUTABLE = 102-main.py
-FILE = 102-square.py 
+SCRIPT = 
+EXECUTABLE = 103-magic_class.py 
+FILE = 103-magic_class.py 
 
 .PHONY: all test chmod git clean
 
