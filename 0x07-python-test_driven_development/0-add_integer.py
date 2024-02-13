@@ -35,9 +35,9 @@ def add_integer(a, b=98):
     >>> add_integer(1.5)
     99
     """
-    if not isinstance(a, (int, float)):
+    if not isinstance(a, (int, float)) or a != a or a > 1e308:
         raise TypeError("a must be an integer")
-    if not isinstance(b, (int, float)):
+    if not isinstance(b, (int, float)) or b != b or b > 1e308:
         raise TypeError("b must be an integer")
 
     sum = int(a) + int(b)
