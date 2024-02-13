@@ -8,7 +8,7 @@ a formatted string of a person's name.
 
 def say_my_name(first_name, last_name=""):
     """
-    Print a formatted sttring of a person's name.
+    Prints a formatted string of a person's name.
 
     Args:
         first_name (str): The first name.
