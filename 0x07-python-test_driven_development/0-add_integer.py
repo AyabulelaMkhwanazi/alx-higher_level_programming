@@ -40,5 +40,10 @@ def add_integer(a, b=98):
     if not isinstance(b, (int, float)) or b != b or b > 1e308:
         raise TypeError("b must be an integer")
 
-    sum = int(a) + int(b)
+    if -1e308 < a < 1e308:
+        a = int(a)
+    if -1e308 < b < 1e308:
+        b = int(b)
+
+    sum = a + b
     return sum
