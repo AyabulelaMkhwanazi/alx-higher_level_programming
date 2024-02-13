@@ -36,6 +36,4 @@ def add_integer(a, b=98):
         b = int(b)
     except Exception:
         raise TypeError
-    
     return a + b
-
