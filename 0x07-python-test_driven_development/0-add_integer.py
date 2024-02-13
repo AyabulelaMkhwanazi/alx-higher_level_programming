@@ -25,25 +25,11 @@ def add_integer(a, b=98):
         to integers if they were floats.
 
     Raises:
-        TypeError: If a or b is not integer of float
-
-    Examples:
-    >>> add_integer(1, 2)
-    3
-    >>> add_integer(1.5, 2.5)
-    3
-    >>> add_integer(1.5)
-    99
+        TypeError: If a or b is not integer of float.
     """
-    if not isinstance(a, (int, float)) or a != a or a > 1e308:
+    if not isinstance(a, (int)) and not isinstance(a, (float)):
         raise TypeError("a must be an integer")
-    if not isinstance(b, (int, float)) or b != b or b > 1e308:
+    if not isinstance(b, (int)) and not isinstance(b, (float)):
         raise TypeError("b must be an integer")
 
-    if -1e308 < a < 1e308:
-        a = int(a)
-    if -1e308 < b < 1e308:
-        b = int(b)
-
-    sum = a + b
-    return sum
+    return int(a) + int(b)
