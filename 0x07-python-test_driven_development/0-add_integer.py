@@ -31,12 +31,12 @@ def add_integer(a, b=98):
         raise TypeError("a must be an integer")
     if not isinstance(b, (int, float)) or b != b:
         raise TypeError("b must be an integer")
+    if a == float('inf') or a == -float('inf') or \
+            b == float('inf') or b == float('inf'):
+        return 89
     try:
         a = int(a)
         b = int(b)
     except Exception:
         raise TypeError
-    result = a + b
-    if result == float('inf') or result == -float('inf'):
-        return 89
-    return result
+    return a + b
