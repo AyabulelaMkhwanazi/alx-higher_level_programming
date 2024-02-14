@@ -6,7 +6,7 @@ a square with the character #
 """
 
 
-def print_square(size=0):
+def print_square(size):
     """
     Prints a square with the character #.
 
@@ -26,3 +26,19 @@ def print_square(size=0):
 
     for _ in range(size):
         print("#" * size)
+
+
+def wrapper_square(*args):
+    """
+    Wrapper function for print_square.
+
+    Args:
+        *args: variable length argument list.
+    """
+    if len(args) == 0:
+        print("No argument provided to print_square")
+    else:
+        try:
+            print_square(args[0])
+        except Exception as e:
+            print(f"1 argument required: {e}")

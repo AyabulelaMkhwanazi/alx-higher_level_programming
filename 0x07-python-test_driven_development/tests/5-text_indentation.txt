@@ -1,0 +1,31 @@
+#!/usr/bin/python3
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("This? is. me:")
+This?
+<BLANKLINE>
+is.
+<BLANKLINE>
+me:
+<BLANKLINE>
+>>> text_indentation("Hello, world!")
+Hello, world!
+
+>>> text_indentation("Hello. World?")
+Hello.
+<BLANKLINE>
+World?
+<BLANKLINE>
+>>> text_indentation("Hello: World!")
+Hello:
+<BLANKLINE>
+World!
+
+>>> text_indentation("Hello World")
+Hello World
+
+>>> text_indentation(123)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
