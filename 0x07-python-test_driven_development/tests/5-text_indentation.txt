@@ -4,10 +4,8 @@
 
 >>> text_indentation("Hi. It's Me?")
 Hi.
-
 <BLANKLINE>
 It's Me?
-
 <BLANKLINE>
 >>> text_indentation(346)
 Traceback (most recent call last):

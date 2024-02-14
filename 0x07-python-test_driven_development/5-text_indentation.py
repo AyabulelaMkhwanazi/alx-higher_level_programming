@@ -35,4 +35,5 @@ def text_indentation(text):
         lines[i] = lines[i].strip()
 
     text = '\n'.join(lines)
+    text = text.rstrip('\n')  # Remove trailing newline characters
     print(text)
