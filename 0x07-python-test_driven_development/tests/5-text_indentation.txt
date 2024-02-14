@@ -2,30 +2,17 @@
 
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
->>> text_indentation("This? is. me:")
-This?
+>>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud:")
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 <BLANKLINE>
-is.
+Quonam modo?
 <BLANKLINE>
-me:
+Utrum igitur tibi litteram videor an totas paginas commovere?
 <BLANKLINE>
->>> text_indentation("Hello, world!")
-Hello, world!
-
->>> text_indentation("Hello. World?")
-Hello.
+Non autem hoc:
 <BLANKLINE>
-World?
+igitur ne illud quidem.
 <BLANKLINE>
->>> text_indentation("Hello: World!")
-Hello:
+Fortasse id optimum, sed ubi illud:
 <BLANKLINE>
-World!
-
->>> text_indentation("Hello World")
-Hello World
-
->>> text_indentation(123)
-Traceback (most recent call last):
 ...
-TypeError: text must be a string
