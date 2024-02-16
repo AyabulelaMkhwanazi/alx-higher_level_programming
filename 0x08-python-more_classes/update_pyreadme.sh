@@ -26,7 +26,7 @@ while true; do
     echo "What's the task title (or 'q' to quit):"
     read task_header
     if [ "$task_num" = "q" ]; then
-        break
+        exit
     fi
     task_num=${task_header%%.*}
     task_title=${task_header#*.}

@@ -1,1 +1,22 @@
-0x08. Python - More Classes and Objects.
+# 0x08. Python - More Classes and Objects
+
+**This directory contains files that can be tested for 0x08. Python - More Classes and Objects .**
+
+> [!IMPORTANT]
+> Make the Python files executables using the following command:
+> `chmod +x <filename>`
+
+
+## Tasks
+
+> [!NOTE]
+> If there aren't any main.py files provided for a task, use test files to run the program.
+
+
+- [x] 0. **Simple rectangle**
+
+   - :file_folder: : `0-rectangle.py`: Write an empty class `Rectangle` that definess a rectangle
+
+- [x] 1. **Real definition of a rectangle**
+
+   - :file_folder: : `1-rectangle.py`: Write a class `Rectangle` that defines a rectangle by: (based on `0-rectangle.py`)

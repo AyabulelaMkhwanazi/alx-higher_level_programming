@@ -2,9 +2,9 @@
 include update_pymakefile.mk
 
 PY = python3
-SCRIPT = 5-main.py
-EXECUTABLE = 5-main.py
-FILE = 5-text_indentation.py 
+SCRIPT = 1-main.py
+EXECUTABLE = 1-main.py
+FILE = 1-rectangle.py 
 
 .PHONY: all test chmod git clean
 
