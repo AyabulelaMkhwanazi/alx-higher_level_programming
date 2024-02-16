@@ -4,10 +4,10 @@
 This module defines a Rectangle class.
 This module defines a Rectangle class for representing rectangles.
 
-The Rectangle class has two private instance attributes: 
-width and height. 
-Both attributes must be integers and greater than or equal to 0. 
-If a non-integer or negative integer is provided, 
+The Rectangle class has two private instance attributes:
+width and height.
+Both attributes must be integers and greater than or equal to 0.
+If a non-integer or negative integer is provided,
 a TypeError or ValueError will be raised respectively.
 
 The Rectangle class provides getter and setter methods for
