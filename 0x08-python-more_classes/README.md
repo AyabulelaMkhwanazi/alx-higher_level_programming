@@ -40,3 +40,11 @@
 - [x] 6. **How many instances**
 
   - :file_folder: : `6-rectangle.py`: Write a class `Rectangle` that defines a rectangle by: (based on `5-rectangle.py`)
+
+- [x] 7. **Change representation**
+
+  - :file_folder: : `7-rectangle.py`: Write a class `Rectangle` that defines a rectangle by: (based on `6-rectangle.py`)
+
+- [x] 8. **Compare rectangles**
+
+  - :file_folder: : `8-rectangle.py`: Write a class `Rectangle` that defines a rectangle by: (based on `7-rectangle.py`)
