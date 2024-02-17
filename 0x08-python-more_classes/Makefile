@@ -2,9 +2,9 @@
 include update_pymakefile.mk
 
 PY = python3
-SCRIPT = 6-main.py
-EXECUTABLE = 6-main.py
-FILE = 6-rectangle.py
+SCRIPT = 7-main.py
+EXECUTABLE = 7-main.py
+FILE = 7-rectangle.py
 
 .PHONY: all test chmod git clean
 
@@ -41,7 +41,7 @@ chmod:
 git:
 	@git add .
 	@if [ -f .commit_msg ]; then \
-		git commit -m "$$(cat .commit_msg)"; \
+		 git commit -m "$$(cat .commit_msg)"; \
 		rm .commit_msg; \
 	else \
 		read -p "Enter commit message: " msg; \
