@@ -32,3 +32,7 @@
 - [x] 4. **Eval is magic**
 
   - :file_folder: : `4-rectangle.py`: Write a class `Rectangle` that defines a rectangle by: (based on `3-rectangle.py`)
+
+- [x] 5. **Detect instance deletion**
+
+  - :file_folder: : `5-rectangle.py`: Write a class `Rectangle` that defines a rectangle by: (based on `4-rectangle.py`)

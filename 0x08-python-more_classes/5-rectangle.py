@@ -18,9 +18,11 @@ perimeter.
 If width or height is equal to 0, perimeter is equal to 0.
 print() and str() should print the rectangle with the character #
 If width or height is equal to 0, an empty string must be returned.
-
 repr() should return a string representation of the rectangle to be
 able to recreate a new instance by using eval().
+
+Print the message Bye rectangle... (... being 3 dots nto ellipsis)
+when an instance of Rectangle is deleted.
 """
 
 
@@ -125,3 +127,9 @@ class Rectangle:
         Returns the string representation of the rectangle.
         """
         return "Rectangle({}, {})".format(self.width, self.height)
+
+    def __del__(self):
+        """
+        Prints a message when an instance of Rectangle is deleted.
+        """
+        print("Bye rectangle...")
