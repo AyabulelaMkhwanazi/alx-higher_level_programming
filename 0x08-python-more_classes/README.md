@@ -20,3 +20,7 @@
 - [x] 1. **Real definition of a rectangle**
 
    - :file_folder: : `1-rectangle.py`: Write a class `Rectangle` that defines a rectangle by: (based on `0-rectangle.py`)
+
+- [x] 2. **Area and Parameter**
+
+   - :file_folder: : `2-rectangle.py`: Write a class `Rectangle` that defines a rectangle by: (based on `1-rectangle.py`)

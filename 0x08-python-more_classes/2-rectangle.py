@@ -3,14 +3,14 @@
 """
 This module defines a Rectangle class for representing rectangles.
 
-The Rectangle class has two private instance attributes:
+This class has 2 private instance attributes:
 width and height.
 Both attributes must be integers and greater than or equal to 0.
-If a non-integer or negative integer is provided,
-a TypeError or ValueError will be raised respectively.
+If non-integer or negative integer is provided, a TypeError
+or ValueError will be raised respectively.
 
-The Rectangle class provides getter and setter methods for
-both width and height attributes.
+The Rectangle class provides getter and setter methods for both
+attributes.
 """
 
 
@@ -82,3 +82,19 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        """
+        Returns the rectangle area.
+        """
+        area = self.width * self.height
+        return area
+
+    def perimeter(self):
+        """
+        Returns the rectangle perimeter.
+        """
+        if self.width == 0 or self.height == 0:
+            return 0
+        perimeter = 2 * self.width + 2 * self.height
+        return perimeter

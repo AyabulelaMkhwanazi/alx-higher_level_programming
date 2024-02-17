@@ -2,9 +2,9 @@
 include update_pymakefile.mk
 
 PY = python3
-SCRIPT = 1-main.py
-EXECUTABLE = 1-main.py
-FILE = 1-rectangle.py 
+SCRIPT = 2-main.py
+EXECUTABLE = 2-main.py
+FILE = 2-rectangle.py 
 
 .PHONY: all test chmod git clean
 
@@ -56,7 +56,7 @@ style:
 	@echo "Checking $(FILE) for style errors..."
 	@sleep 2
 	@bash -c '\
-	OUTPUT=$$(pycodestyle $(FILE)); \
+	OUTPUT=$$(python3 -m pycodestyle $(FILE)); \
 	if [ -n "$$OUTPUT" ]; then \
 		echo $$OUTPUT; \
         else \
