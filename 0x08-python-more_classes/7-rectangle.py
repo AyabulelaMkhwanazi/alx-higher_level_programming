@@ -132,10 +132,12 @@ class Rectangle:
         Prints the rectangle with the character #
         """
         result = ""  # empty string
+        symbol = self.print_symbol if hasattr(self, 'print_symbol')\
+            else type(self).print_symbol
         if self.width == 0 or self.height == 0:
             return result
         for _ in range(self.height):
-            result += str(type(self).print_symbol) * self.width + '\n'
+            result += str(symbol) * self.width + '\n'
         return result.rstrip('\n')  # trailing newline
 
     def __repr__(self):
