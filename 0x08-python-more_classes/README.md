@@ -27,4 +27,8 @@
 
 - [x] 3. **String representation**
 
-   - :file_folder: : `3-rectangle.py`: Write a class `Rectangle` that defines a rectangle by: (based on `2-rectangle.py`)
+  - :file_folder: : `3-rectangle.py`: Write a class `Rectangle` that defines a rectangle by: (based on `2-rectangle.py`)
+
+- [x] 4. **Eval is magic**
+
+  - :file_folder: : `4-rectangle.py`: Write a class `Rectangle` that defines a rectangle by: (based on `3-rectangle.py`)

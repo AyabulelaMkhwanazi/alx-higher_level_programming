@@ -25,7 +25,7 @@ while true; do
     echo ""
     echo "What's the task title (or 'q' to quit):"
     read task_header
-    if [ "$task_num" = "q" ]; then
+    if [ "$task_header" = "q" ]; then
         exit
     fi
     task_num=${task_header%%.*}
@@ -45,7 +45,7 @@ while true; do
     echo "" >> README.md
     echo "- [x] $task_num. **$task_title**" >> README.md
     echo "" >> README.md
-    echo "   - :file_folder: : \`$file_name\`: $desc" >> README.md
+    echo "  - :file_folder: : \`$file_name\`: $desc" >> README.md
 	echo "${task_title/<sup>:fire: advanced<\/sup>/}" >> .commit_msg
     while true; do
 		echo ""

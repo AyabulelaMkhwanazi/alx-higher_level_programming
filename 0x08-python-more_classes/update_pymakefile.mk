@@ -16,18 +16,23 @@ README_SH := update_pyreadme.sh
 
 # Updates the target makefile.
 update_makefile:
-	@echo -n "Updating $(TARGET_MAKEFILE)"; \
-	echo; \
-	i=0; \
-	spin='-\|/'; \
+	@i=0; \
 	while [ $$i -lt 20 ]; do \
-		printf "\b$${spin:i++%4:1}"; \
+		printf "\rUpdating $(TARGET_MAKEFILE) ."; \
+		sleep .1; \
+		printf "\rUpdating $(TARGET_MAKEFILE) .."; \
+		sleep .1; \
+		printf "\rUpdating $(TARGET_MAKEFILE) ..."; \
+		sleep .1; \
+		printf "\rUpdating $(TARGET_MAKEFILE) .."; \
+		sleep .1; \
+		printf "\rUpdating $(TARGET_MAKEFILE) ."; \
 		sleep .1; \
 		i=$$((i+1)); \
 	done; \
-	printf "\b "; \
+	printf "\r%$${COLUMNS}s\r"; \
 	if [ "$(MAIN_FILE)" = "$(OLD_MAIN_FILE)" ]; then \
-		echo "No new main file found..."; \
+		echo "No new main file found!"; \
 		sed -i 's|SCRIPT = .*|SCRIPT = |' $(TARGET_MAKEFILE); \
 	else \
 		sed -i 's|SCRIPT = .*|SCRIPT = $(MAIN_FILE)|' $(TARGET_MAKEFILE); \
@@ -46,20 +51,23 @@ update_makefile:
 		echo "Didn't find new test files"; \
 	else \
 		sed -i 's|FILE = .*|FILE = $(TEST_FILES)|' $(TARGET_MAKEFILE); \
-	fi
+	fi; \
+	echo -n "UPDATED"; \
+	sleep 2; \
+	printf "\r%$${COLUMNS}s\r"; 
 
 # Updates the README file.
 update_pyreadme:
 	@i=0; \
-	spin='-\|/'; \
-	while [ $$i -lt 20 ]; do \
-		printf "\b$${spin:i++%4:1}"; \
+	spin='/-\|'; \
+	while [ $$i -lt 40 ]; do \
+		printf "\rRunning $(README_SH) %$${i}s${spin:i++%4:1}"; \
 		sleep .1; \
 		i=$$((i+1)); \
 	done; \
-	printf "\b "; \
+	printf "\r%$${COLUMNS}s\r"; \
 	if [ -n "$(README_SH)" ]; then \
 		chmod u+x $(README_SH); \
-		echo "Running $(README_SH)..."; \
 		./$(README_SH); \
-	fi
+	fi; \
+	printf "\r%$${COLUMNS}s\r"
