@@ -48,3 +48,7 @@
 - [x] 8. **Compare rectangles**
 
   - :file_folder: : `8-rectangle.py`: Write a class `Rectangle` that defines a rectangle by: (based on `7-rectangle.py`)
+
+- [x] 9. **A square is a rectangle**
+
+  - :file_folder: : `9-rectangle.py`: Write a class `Rectangle` that defines a rectangle by: (based on `8-rectangle.py`)
