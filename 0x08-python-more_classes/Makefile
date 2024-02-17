@@ -2,34 +2,41 @@
 include update_pymakefile.mk
 
 PY = python3
-SCRIPT = 5-main.py
-EXECUTABLE = 5-main.py
-FILE = 5-rectangle.py 
+SCRIPT = 6-main.py
+EXECUTABLE = 6-main.py
+FILE = 6-rectangle.py
 
 .PHONY: all test chmod git clean
 
 all: chmod test count style
 
 test:
-	@echo
 	@if [ "$(SCRIPT)" = "" ]; then \
-		echo "Running $(FILE)..."; \
-		sleep 1; \
-		$(PY) $(FILE); \
+		printf "\rRunning $(FILE) ..."; \
+		sleep 2; \
+		printf "\r%$${COLUMNS}s\r"; \
+		OUTPUT=$$($(PY) $(FILE)); \
+		echo "$${OUTPUT}" | sed -e 's/^ */\t/g'; \
 		EXECUTABLE=$(FILE); \
 	else \
-		echo "Running $(SCRIPT)..."; \
-		sleep 1; \
-		$(PY) $(SCRIPT); \
+		printf "\rRunning $(SCRIPT) ..."; \
+		sleep 2; \
+		printf "\r%$${COLUMNS}s\r"; \
+		OUTPUT=$$($(PY) $(SCRIPT)); \
+		echo "$${OUTPUT}" | sed -e 's/^ */\t/g'; \
 		EXECUTABLE=$(SCRIPT); \
 	fi
 	@echo
-	@echo "$(EXECUTABLE) is the executable file"
+	@printf "\r$(EXECUTABLE) is the executable file"; \
+	sleep 2; \
+	printf "\r%$${COLUMNS}s\r";
 
 chmod:
 	@echo
 	@chmod u+x $(EXECUTABLE)
-	@echo "$(EXECUTABLE) made an executable"
+	@printf "\r$(EXECUTABLE) made an executable"; \
+	sleep 3; \
+	printf "\r%$${COLUMNS}s\r";
 
 git:
 	@git add .
@@ -46,20 +53,27 @@ clean:
 	rm -f *.pyc
 
 count:
-	@echo
-	@echo "Line count:"
-	@wc -l $(FILE)
-	@sleep 1
-	@echo
+	@printf "\rLine count: \n";
+	@OUTPUT=$$(wc -l $(FILE)); \
+	echo $$OUTPUT; \
+	sleep 3; \
+	printf "\033[1A"; \
+	printf "\r%$${COLUMNS}s\r"; \
+	printf "\033[1A"; \
+	printf "\r%$${COLUMNS}s\r";
 
 style:
-	@echo "Checking $(FILE) for style errors..."
-	@sleep 2
-	@bash -c '\
-	OUTPUT=$$(python3 -m pycodestyle $(FILE)); \
+	@printf "\rChecking $(FILE) for style errors:\n"
+	@sleep 1;
+	@printf "\r%$${COLUMNS}s\r";
+	@OUTPUT=$$(python3 -m pycodestyle $(FILE)); \
 	if [ -n "$$OUTPUT" ]; then \
 		echo $$OUTPUT; \
-        else \
-                echo "No errors"; \
-        fi'
-	@echo
+    else \
+        echo "No errors"; \
+		sleep 1; \
+		printf "\033[1A"; \
+		printf "\r%$${COLUMNS}s\r"; \
+		printf "\033[1A"; \
+		printf "\r%$${COLUMNS}s\r"; \
+    fi

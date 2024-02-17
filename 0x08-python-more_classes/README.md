@@ -36,3 +36,7 @@
 - [x] 5. **Detect instance deletion**
 
   - :file_folder: : `5-rectangle.py`: Write a class `Rectangle` that defines a rectangle by: (based on `4-rectangle.py`)
+
+- [x] 6. **How many instances**
+
+  - :file_folder: : `6-rectangle.py`: Write a class `Rectangle` that defines a rectangle by: (based on `5-rectangle.py`)

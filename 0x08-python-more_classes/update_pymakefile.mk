@@ -8,7 +8,7 @@ LATEST_NUM := $(shell ls -v | grep -oP '^\K\d+' | tail -n 1)
 
 # Check if main and test files exist for the latest number
 MAIN_FILE := $(shell if [ -f "$(LATEST_NUM)-main.py" ]; then echo "$(LATEST_NUM)-main.py"; fi)
-TEST_FILES := $(shell ls -v $(LATEST_NUM)*.py 2>/dev/null | grep -v "$(LATEST_NUM)-main.py" | tr '\n' ' ')
+TEST_FILES := $(shell ls -v $(LATEST_NUM)*.py 2>/dev/null | grep -v "$(LATEST_NUM)-main.py" | tr '\n' ' ' | sed 's/ *$$//')
 
 README_SH := update_pyreadme.sh
 
@@ -17,22 +17,18 @@ README_SH := update_pyreadme.sh
 # Updates the target makefile.
 update_makefile:
 	@i=0; \
-	while [ $$i -lt 20 ]; do \
-		printf "\rUpdating $(TARGET_MAKEFILE) ."; \
-		sleep .1; \
-		printf "\rUpdating $(TARGET_MAKEFILE) .."; \
-		sleep .1; \
-		printf "\rUpdating $(TARGET_MAKEFILE) ..."; \
-		sleep .1; \
-		printf "\rUpdating $(TARGET_MAKEFILE) .."; \
-		sleep .1; \
-		printf "\rUpdating $(TARGET_MAKEFILE) ."; \
-		sleep .1; \
+	total=20; \
+	while [ $$i -le $$total ]; do \
+		perc=$$((200*$$i/$$total % 2 + 100*$$i/$$total)); \
+		printf "\rUpdating $(TARGET_MAKEFILE): %3d%%" $$perc; \
+		sleep .05; \
 		i=$$((i+1)); \
 	done; \
 	printf "\r%$${COLUMNS}s\r"; \
 	if [ "$(MAIN_FILE)" = "$(OLD_MAIN_FILE)" ]; then \
-		echo "No new main file found!"; \
+		printf "\rNo new main file found!"; \
+		sleep 1; \
+		printf "\r%$${COLUMNS}s\r"; \
 		sed -i 's|SCRIPT = .*|SCRIPT = |' $(TARGET_MAKEFILE); \
 	else \
 		sed -i 's|SCRIPT = .*|SCRIPT = $(MAIN_FILE)|' $(TARGET_MAKEFILE); \
@@ -58,11 +54,12 @@ update_makefile:
 
 # Updates the README file.
 update_pyreadme:
+	@echo
 	@i=0; \
-	spin='/-\|'; \
-	while [ $$i -lt 40 ]; do \
-		printf "\rRunning $(README_SH) %$${i}s${spin:i++%4:1}"; \
-		sleep .1; \
+	spin='-\|/'; \
+	while [ $$i -lt 50 ]; do \
+		printf "\rRunning $(README_SH) %c"  "$${spin:i++%4:1}"; \
+		sleep .0120; \
 		i=$$((i+1)); \
 	done; \
 	printf "\r%$${COLUMNS}s\r"; \
