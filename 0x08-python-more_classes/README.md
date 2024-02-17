@@ -15,12 +15,16 @@
 
 - [x] 0. **Simple rectangle**
 
-   - :file_folder: : `0-rectangle.py`: Write an empty class `Rectangle` that definess a rectangle
+  - :file_folder: : `0-rectangle.py`: Write an empty class `Rectangle` that definess a rectangle
 
 - [x] 1. **Real definition of a rectangle**
 
-   - :file_folder: : `1-rectangle.py`: Write a class `Rectangle` that defines a rectangle by: (based on `0-rectangle.py`)
+  - :file_folder: : `1-rectangle.py`: Write a class `Rectangle` that defines a rectangle by: (based on `0-rectangle.py`)
 
-- [x] 2. **Area and Parameter**
+- [x] 2. **Area and Perimeter**
 
-   - :file_folder: : `2-rectangle.py`: Write a class `Rectangle` that defines a rectangle by: (based on `1-rectangle.py`)
+  - :file_folder: : `2-rectangle.py`: Write a class `Rectangle` that defines a rectangle by: (based on `1-rectangle.py`)
+
+- [x] 3. **String representation**
+
+   - :file_folder: : `3-rectangle.py`: Write a class `Rectangle` that defines a rectangle by: (based on `2-rectangle.py`)

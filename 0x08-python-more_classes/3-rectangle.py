@@ -16,6 +16,8 @@ This class has 2 public instance methods:
 area and perimeter, which return the rectangle area and rectangle
 perimeter.
 If width or height is equal to 0, perimeter is equal to 0.
+print() and str() should print the rectangle with the character #
+If width or height is equal to 0, an empty string must be returned.
 """
 
 
@@ -103,3 +105,14 @@ class Rectangle:
             return 0
         perimeter = 2 * self.width + 2 * self.height
         return perimeter
+
+    def __str__(self):
+        """
+        Prints the rectangle with the character #
+        """
+        result = ""  # empty string
+        if self.width == 0 or self.height == 0:
+            return result
+        for _ in range(self.height):
+            result += '#' * self.width + '\n'
+        return result.rstrip('\n')  # trailing newline
