@@ -15,4 +15,10 @@ class LockedClass:
         if name != 'first_name' and name != '__dict__':
             raise AttributeError("'{}' object has no attribute \
 '{}'".format(self.__class__.__name__, name))
-        self.__dict__[name] = value
+        super().__setattr__(name, value)
+
+    def __getattribute__(self, name):
+        if name == '__dict__':
+            raise AttributeError("'{}' object has no \
+attribute '{}'".format(self.__class__.__name__, name))
+        return super().__getattribute__(name)
