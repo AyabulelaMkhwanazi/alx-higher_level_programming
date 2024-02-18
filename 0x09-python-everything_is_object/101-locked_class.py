@@ -12,7 +12,7 @@ class LockedClass:
     first_name.
     """
     def __setattr__(self, name, value):
-        if name != 'first_name':
+        if name != 'first_name' and name != '__dict__':
             raise AttributeError("'{}' object has no attribute \
 '{}'".format(self.__class__.__name__, name))
         self.__dict__[name] = value
