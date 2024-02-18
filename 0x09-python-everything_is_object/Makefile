@@ -2,8 +2,8 @@
 include update_pymakefile.mk
 
 PY = python3
-SCRIPT = 19-main.py
-EXECUTABLE = 19-main.py
+SCRIPT = 
+EXECUTABLE = 
 FILE = 19-copy_list.py
 
 .PHONY: all test chmod git clean
