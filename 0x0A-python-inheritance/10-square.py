@@ -9,7 +9,7 @@ Rectangle = __import__('9-rectangle').Rectangle
 class Square(Rectangle):
     """
     Represents a Square.
-    
+
     This class inherits from the 'Rectangle' class and
     is initialized with 'size' which is validated by the
     integer_validator method from BaseGeometry class inherited
