@@ -24,7 +24,7 @@ class Square(Rectangle):
 
         Args:
             size (int): The size of the square.
-        
+
         Raises:
             TypeError: If size is not an integer.
             ValueError: If size is not greater than 0.
