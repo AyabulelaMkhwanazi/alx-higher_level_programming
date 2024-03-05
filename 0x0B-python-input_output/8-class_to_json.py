@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """
 This module contains a function 'class_to_json' that returns the dictionary
