@@ -31,8 +31,8 @@ class Student:
         attribute_dict = {}
         if isinstance(attrs, list):
             for attr in attrs:
-                # check if the attribute is a string.
-                if isinstance(attr, str):
+            # check if the attribute is a string and exits in Student instance
+                if isinstance(attr, str) and hasattr(self, attr):
                     # get the value of the attribute.
                     attr_value = getattr(self, attr, None)
                     # add the attribute and its value to the dictionary.
