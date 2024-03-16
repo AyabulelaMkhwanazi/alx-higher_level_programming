@@ -1,6 +1,5 @@
 -- This script lists all shows contained in hbtn_0d_tvshows that have at least one genre linked.
 
-
 -- The data to display.
 SELECT tv_shows.title, tv_show_genres.genre_id
 
